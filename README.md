@@ -39,7 +39,7 @@
         dialogFragment.show(getSupportFragmentManager(), "");
 </code></pre>
 
-### 这个是系统的AlertDialog的用法，和上面的组建的用法完全一样：
+### 这个是系统的AlertDialog的用法，和上面的组件的用法完全一样：
 <pre>
  <code>
 	new AlertDialog.Builder(self) 
