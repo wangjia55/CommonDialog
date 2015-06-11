@@ -19,7 +19,7 @@ public class MainActivity extends FragmentActivity {
         AlertDialogFragment dialogFragment = new AlertDialogFragment.Builder(this)
                 .setTitle("这是标题")
                 .setMessage("这是一个通用的DialogFragment组件：只有一个按钮，含有标题")
-                .setPositiveButton("好的", -1, new DialogInterface.OnClickListener() {
+                .setPositiveButton("确定", -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Log.e("TAG", "" + which);
@@ -31,7 +31,7 @@ public class MainActivity extends FragmentActivity {
 
     public void twoButton(View view) {
         AlertDialogFragment dialogFragment = new AlertDialogFragment.Builder(this)
-                .setMessage("这是一个通用的DialogFragment组件：有两个按钮，没有标题")
+                .setMessage("这是一个通用的DialogFragment组件：有两个按钮，没有标题，并可以自己设置按钮背景")
                 .setPositiveButton("好的", R.drawable.bg_btn_grey, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
