@@ -50,7 +50,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void showToast(View view) {
-
+        AlertToast.showToast(getApplicationContext(),"这是一个自定义的Toast");
     }
 
 }

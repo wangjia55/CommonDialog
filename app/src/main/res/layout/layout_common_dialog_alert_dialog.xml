@@ -32,22 +32,23 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/view_dimen_15"
         android:orientation="horizontal"
-        android:paddingLeft="@dimen/view_dimen_15"
-        android:paddingRight="@dimen/view_dimen_15">
+        android:gravity="center"
+        android:paddingLeft="@dimen/view_dimen_10"
+        android:paddingRight="@dimen/view_dimen_10">
 
         <Button
             android:id="@+id/button_negative"
             style="@style/style_button_grey"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="@dimen/view_dimen_10"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="@string/button_cancel"/>
 
         <Button
             android:id="@+id/button_positive"
             style="@style/style_button_orange"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:text="@string/button_ok"/>
     </LinearLayout>
