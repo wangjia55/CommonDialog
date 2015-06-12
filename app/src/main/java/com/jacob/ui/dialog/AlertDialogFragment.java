@@ -173,7 +173,11 @@ public class AlertDialogFragment extends DialogFragment implements DialogInterfa
                 case DialogInterface.BUTTON_POSITIVE:
                 case DialogInterface.BUTTON_NEGATIVE:
                 case DialogInterface.BUTTON_NEUTRAL:
-                    ((DialogInterface.OnClickListener) msg.obj).onClick(mDialog.get(), msg.what);
+                    DialogInterface.OnClickListener listener = ((DialogInterface.OnClickListener) msg.obj);
+                    if (listener != null) {
+                        listener.onClick(mDialog.get(), msg.what);
+                    }
+
                     break;
 
                 case MSG_DISMISS_DIALOG:
@@ -291,7 +295,7 @@ public class AlertDialogFragment extends DialogFragment implements DialogInterfa
 
     }
 
-     void setDialogWidth(Context context, Dialog dialog) {
+    void setDialogWidth(Context context, Dialog dialog) {
         DisplayMetrics dm = new DisplayMetrics();
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         windowManager.getDefaultDisplay().getMetrics(dm);

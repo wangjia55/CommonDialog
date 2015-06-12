@@ -32,12 +32,7 @@ public class MainActivity extends FragmentActivity {
     public void twoButton(View view) {
         AlertDialogFragment dialogFragment = new AlertDialogFragment.Builder(this)
                 .setMessage("这是一个通用的DialogFragment组件：有两个按钮，没有标题，并可以自己设置按钮背景")
-                .setPositiveButton("好的", R.drawable.bg_btn_grey, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.e("TAG", "" + which);
-                    }
-                })
+                .setPositiveButton("好的", R.drawable.bg_btn_grey, null)
                 .setNegativeButton("取消", R.drawable.bg_btn_orange, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
